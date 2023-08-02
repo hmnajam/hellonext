@@ -20,23 +20,12 @@
 //   )
 // }
 
-
-
-
-
-
-
-
-
 // app/layout.tsx
 
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
-
 import Navbar from "../components/ui/Navbar";
-
 import Footer from "../components/ui/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -49,10 +38,36 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
-  return (
+// This function is absolutely working.
+
+// export default function RootLayout({children}: {children: React.ReactNode}) {
+
+//   const isLoggedin = true
+//   return (
+
+//           <html lang="en">
+//           <body className={`${inter.className} bg-zinc-900 text-white`}>
+//             <Navbar />
+//             {children}
+//             <Footer />
+//           </body>
+//         </html>
+//   )
+// }
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const isLoggedin = true;
+  return isLoggedin ? (
     <html lang="en">
       <body className={`${inter.className} bg-zinc-900 text-white`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  ) : (
+    <html lang="en">
+      <body className={`${inter.className} bg-white text-black`}>
         <Navbar />
         {children}
         <Footer />

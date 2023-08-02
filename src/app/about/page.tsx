@@ -1,9 +1,7 @@
-
 // "use client"
 
 // import Link from 'next/link';
 // import Example from '@/components/ui/navbar3';
-
 
 // import { Button } from "@/components/ui/button"
 // import { Input } from "@/components/ui/input"
@@ -19,9 +17,6 @@
 //   SheetTrigger,
 // } from "@/components/ui/sheet"
 
-
-
-
 // export default function Portfolio() {
 //   return (
 //     <>
@@ -30,12 +25,10 @@
 //       <h2>
 //         <Link href="/">Back to home</Link>
 //       </h2>
-      
+
 //     </>
 //   );
 // }
-
-
 
 // const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
 
@@ -82,21 +75,6 @@
 //   )
 
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // app/about/page.tsx
 
