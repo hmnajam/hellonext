@@ -72,7 +72,7 @@ export default async function Home() {
           ))}
         <HeroSvg />
       </section>
-      <Job /> // declare job component
+      <Job />
     </main>
   );
 }
