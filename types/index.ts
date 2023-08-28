@@ -2,7 +2,7 @@
 import { PortableTextBlock } from "sanity";
 
 
-// Adding types for dataset from Sanity.
+// Adding Profile types for dataset from Sanity.
 export type ProfileType = {
   _id: string,
   fullName: string,
@@ -21,7 +21,7 @@ export type ProfileType = {
 };
 
 
-// Adding types for dataset from Sanity.
+// Adding Job types for dataset from Sanity.
 export type JobType = {
   _id: string;
   name: string;
@@ -31,4 +31,20 @@ export type JobType = {
   description: string;
   startDate: Date;
   endDate: Date;
+};
+
+
+// Adding Project types for dataset from Sanity.
+export type ProjectType = {
+  _id: string;
+  name: string;
+  slug: string;
+  tagline: string;
+  projectUrl: string;
+  logo: string;
+  coverImage: {
+    alt: string | null;
+    image: string;
+  };
+  description: PortableTextBlock[];
 };
