@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   if (url.searchParams.has("name")) {
   //  const ip = request.ip;
     const ip =
-    request.headers.get("x-forwarded-for") || request.connection.remoteAddress;
+    request.headers.get("x-forwarded-for") 
 
     const name = url.searchParams.get("name");
     const age = url.searchParams.get("age");
