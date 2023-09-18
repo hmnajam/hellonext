@@ -4,9 +4,8 @@ export async function GET(request: NextRequest) {
   const url = request.nextUrl;
 
   if (url.searchParams.has("name")) {
-  //  const ip = request.ip;
-    const ip =
-    request.headers.get("x-forwarded-for") 
+    //  const ip = request.ip;
+    const ip = request.headers.get("x-forwarded-for");
 
     const name = url.searchParams.get("name");
     const age = url.searchParams.get("age");
@@ -14,6 +13,8 @@ export async function GET(request: NextRequest) {
     return new NextResponse(`Hello! I am ${name}. I am ${age} years old.
     My IP address is ${ip}. The time right now is ${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`);
   } else {
-    return new NextResponse('Please send your name in search parameter "name" and age in "age"');
+    return new NextResponse(
+      'Please send your name in search parameter "name" and age in "age"'
+    );
   }
 }
